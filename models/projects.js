@@ -1,0 +1,17 @@
+const mongoose = require("mongoose");
+const projectsSchema = new mongoose.Schema({
+  projectTitle: {
+    type: String,
+    required: true,
+  },
+  description: {
+    type: String,
+    required: true,
+  },
+  author: {
+    type: String,
+    required: true,
+  },
+});
+const Projects = mongoose.model( "Projects",projectsSchema);
+module.exports = Projects;
