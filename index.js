@@ -12,6 +12,8 @@ const db = require ('./config/mongoose');
 
 // using saas as middleware
 const sassMiddleware = require("node-sass-middleware");
+
+
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
 
@@ -19,16 +21,16 @@ app.use(
     sassMiddleware({
       src: "./assets/scss",
       dest: "./assets/css",
-      debug: false,
+      debug: true,
       outputStyle: "extended",
       prefix: "/css",
     })
   );
-  app.use(expressLayouts);
+app.use(expressLayouts);
   //for connection with static directory
-  app.use(express.static("./assets"));
-  app.set("layout extractStyles", true),
-    app.set("layout extractScripts", true),
+app.use(express.static("./assets"));
+app.set("layout extractStyles", true),
+app.set("layout extractScripts", true),
     app.use(express.urlencoded());
 
 

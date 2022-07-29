@@ -8,14 +8,16 @@ const issuesSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  labels: {
-    type: String,
-    required: true,
-  },
   author: {
     type: String,
     required: true,
   },
-});
-const Issues = mongoose.model( "Issues",issusSchema);
+  labels: [{
+    type:String,
+  }],
+},
+  {
+    timestamps: true,
+  });
+const Issues = mongoose.model( "Issues",issuesSchema);
 module.exports = Issues;

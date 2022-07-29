@@ -12,6 +12,13 @@ const projectsSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  issues:[{
+    type:mongoose.Schema.Types.ObjectId,
+    ref : 'Issues'    
+  }],
+  labels: [{
+    type:String,
+  }],
 });
 const Projects = mongoose.model( "Projects",projectsSchema);
 module.exports = Projects;

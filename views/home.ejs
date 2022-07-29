@@ -1,11 +1,117 @@
-<!DOCTYPE html>
-<head>
-    <title>
-        <%=title%>
-    </title>
-</head>
+<link rel="stylesheet" href="/css/home.css">
+
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">   
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<link rel="stylesheet" 
+href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css"></style>
+<script type="text/javascript" 
+src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" 
+src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
 <body>
-    <h1> Home Page</h1>
-    <h3>List of Projects</h3>
+    <div id="main-container">
+        <div id="add-project">
+            <button>Add Project <i class="fa-solid fa-circle-plus"></i></button>
+            
+        </div>
+        <div id="add-project-form-container">
+
+        </div>
+        <div id="project-list-container">
+            <div id="table-container">
+                <table id="myTable">  
+                    <thead>  
+                    <tr>  
+                        <th>Title</th>  
+                        <th>Description</th>  
+                        <th>Author</th>
+                    </tr>  
+                    </thead>  
+                    <tbody>  
+                    
+                    <tr class="project-tr">  
+                       <td>
+                            <a href="#"><span class="sn">1.</span> <span class="title">Review System</span></a> 
+                       </td>
+                       <td>
+                        <div class="desc">
+                            Employees to submit feedback toward each other’s performance.
+                        </div>
+                       
+                        <div class="recent-feedback">
+                            <span>Issue</span>
+                            #9. Error in css of home controller. Home ---> View
+                        </div>
+                       </td>
+                       <td class="author">
+                            Annu Kumar Singh
+                       </td>
+                    </tr>  
+                    <tr class="project-tr">  
+                       <td>
+                            <a href="#"><span class="sn">1.</span> <span class="title">Review System</span></a> 
+                       </td>
+                       <td>
+                        <div class="desc">
+                            Employees to submit feedback toward each other’s performance.
+                        </div>
+                       
+                        <div class="recent-feedback">
+                            <span>Issue</span>
+                            #9. Error in css of home controller. Home ---> View
+                        </div>
+                       </td>
+                       <td class="author">
+                            Annu Kumar Singh
+                       </td>
+                    </tr>  
+                    <tr class="project-tr">  
+                       <td>
+                            <a href="#"><span class="sn">1.</span> <span class="title">Review System</span></a> 
+                       </td>
+                       <td>
+                        <div class="desc">
+                            Employees to submit feedback toward each other’s performance.
+                        </div>
+                       
+                        <div class="recent-feedback">
+                            <span>Issue</span>
+                            #9. Error in css of home controller. Home ---> View
+                        </div>
+                       </td>
+                       <td class="author">
+                            Annu Kumar Singh
+                       </td>
+                    </tr>  
+                    <tr class="project-tr">  
+                       <td>
+                            <a href="#"><span class="sn">1.</span> <span class="title">Review System</span></a> 
+                       </td>
+                       <td>
+                        <div class="desc">
+                            Employees to submit feedback toward each other’s performance.
+                        </div>
+                       
+                        <div class="recent-feedback">
+                            <span>Issue</span>
+                            #9. Error in css of home controller. Home ---> View
+                        </div>
+                       </td>
+                       <td class="author">
+                            Annu Kumar Singh
+                       </td>
+                    </tr>  
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        $(document).ready(function(){
+            $('#myTable').dataTable();
+        });
+    </script>
 </body>
-</html>

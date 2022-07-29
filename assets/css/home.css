@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira:wght@100&display=swap");
+#main-container #add-project {
+  text-align: end;
+  padding-right: 25px; }
+  #main-container #add-project button {
+    border: none;
+    background: #28bce3;
+    color: #e9ecef;
+    font-size: 20px;
+    border-radius: 18px; }
+  #main-container #add-project button:hover {
+    background: #f3426d; }
+  #main-container #add-project button:hover .fa-circle-plus {
+    transform: scale(1.8);
+    margin-left: 5px; }
+
+#main-container #project-list-container {
+  margin-top: 25px;
+  text-align: -webkit-center; }
+  #main-container #project-list-container #table-container {
+    width: 95%;
+    background: aliceblue;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px; }
+    #main-container #project-list-container #table-container label {
+      color: #6c757d; }
+    #main-container #project-list-container #table-container input {
+      border-radius: 10px;
+      border: solid 1px pink; }
+    #main-container #project-list-container #table-container input:focus {
+      outline: none;
+      border-radius: 10px;
+      border: solid 3px pink; }
+    #main-container #project-list-container #table-container table .project-tr:nth-child(odd) {
+      background-color: #28bce32e; }
+    #main-container #project-list-container #table-container table .project-tr:nth-child(odd):hover {
+      background-color: #28bce352; }
+    #main-container #project-list-container #table-container table .project-tr:nth-child(even) {
+      background-color: #ffc1073b; }
+    #main-container #project-list-container #table-container table .project-tr:nth-child(even):hover {
+      background-color: #ffc10769; }
+    #main-container #project-list-container #table-container table .project-tr td .sn {
+      color: #6c757d;
+      font-size: larger;
+      text-decoration: none; }
+    #main-container #project-list-container #table-container table .project-tr td .title {
+      color: #6e7991;
+      font-size: large; }
+    #main-container #project-list-container #table-container table .project-tr td .recent-feedback {
+      background: #6c757d85;
+      color: white;
+      font-size: 13px;
+      font-family: 'Saira', sans-serif;
+      padding: 10px;
+      border-radius: 25px;
+      margin-top: 11px;
+      padding-left: 20px; }
+      #main-container #project-list-container #table-container table .project-tr td .recent-feedback span {
+        font-weight: bold; }
+    #main-container #project-list-container #table-container table .project-tr .author {
+      color: #4c93c4;
+      font-size: larger; }
+    #main-container #project-list-container #table-container table tr {
+      cursor: pointer; }
+      #main-container #project-list-container #table-container table tr th {
+        color: #4c93c4;
+        font-size: 17px; }
