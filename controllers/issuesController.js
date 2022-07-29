@@ -9,12 +9,14 @@ module.exports.createIssue = async (req, res) => {
     let issues = await Issues.create(req.body)
     let project = await Projects.findById(req.body.project)
     project.issues.push(issues._id);
-    return res.redirect('back')
+    return res.redirect('back');
   } catch (error) {
     console.log("Error in Issue Creation",error)
   }  
   };
 
+
+  
 
   module.exports.deleteIssue = async(req,res) =>{
     try {

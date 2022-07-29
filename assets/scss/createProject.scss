@@ -1,14 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
 #form-container {
+ 
     form {
       div {
+        font-family: 'Roboto Mono',monospace;
         display: flex;
-        justify-content: space-between;
         margin: 5px;
         input {
           width: auto;
         }
-        select {
-          width: inherit;
+        label{
+          color:black;
         }
       }
     }

@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+#main-container {
+  #create-project{
+    text-align: end;
+    padding-right: 30px;
+    button{
+      font-family:cursive;
+        border: none;
+        background: #b99b36;
+        color: #e9ecef;
+        font-size: 22px;  
+    }
+    button:hover{
+        background: #745e97;
+    }
+  }
+  #form-container{
+    form { width: 50%;
+    border: solid 2px black;
+    border-radius: 10px;
+    margin: 10px;
+  
+      div {
+        font-family: 'Roboto Mono',monospace;
+        display: flex;
+        margin: 5px;
+        background:#fff;
+        color: green;
+  
+        input {
+          width: auto;
+        }
+      }
+    }
+  }
+}

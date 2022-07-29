@@ -13,10 +13,9 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></scrip
     <div id="main-container">
         <div id="add-project">
             <button>Add Project <i class="fa-solid fa-circle-plus"></i></button>
-            
-        </div>
+            </div>
         <div id="add-project-form-container">
-
+            <%- include('_createProject.ejs')%>
         </div>
         <div id="project-list-container">
             <div id="table-container">
@@ -29,79 +28,29 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></scrip
                     </tr>  
                     </thead>  
                     <tbody>  
+                    <% for(project of projects){ %>
+
+                    <tr class="project-tr">  
+                       <td>
+                            <a href="/projects/view/<%=project._id%>"><span class="sn"><%=index %>.</span> <span class="title"><%=project.projectTitle %></span></a> 
+                       </td>
+                       <td>
+                        <div class="desc">
+                            <%= project.description %>
+                        </div>
+                       
+                        <div class="recent-feedback">
+                            <span>Issue</span>
+                            #9. Error in css of home controller. Home ---> View
+                        </div>
+                       </td>
+                       <td class="author">
+                        <%= project.author %>
+
+                       </td>
+                    </tr>  
                     
-                    <tr class="project-tr">  
-                       <td>
-                            <a href="#"><span class="sn">1.</span> <span class="title">Review System</span></a> 
-                       </td>
-                       <td>
-                        <div class="desc">
-                            Employees to submit feedback toward each other’s performance.
-                        </div>
-                       
-                        <div class="recent-feedback">
-                            <span>Issue</span>
-                            #9. Error in css of home controller. Home ---> View
-                        </div>
-                       </td>
-                       <td class="author">
-                            Annu Kumar Singh
-                       </td>
-                    </tr>  
-                    <tr class="project-tr">  
-                       <td>
-                            <a href="#"><span class="sn">1.</span> <span class="title">Review System</span></a> 
-                       </td>
-                       <td>
-                        <div class="desc">
-                            Employees to submit feedback toward each other’s performance.
-                        </div>
-                       
-                        <div class="recent-feedback">
-                            <span>Issue</span>
-                            #9. Error in css of home controller. Home ---> View
-                        </div>
-                       </td>
-                       <td class="author">
-                            Annu Kumar Singh
-                       </td>
-                    </tr>  
-                    <tr class="project-tr">  
-                       <td>
-                            <a href="#"><span class="sn">1.</span> <span class="title">Review System</span></a> 
-                       </td>
-                       <td>
-                        <div class="desc">
-                            Employees to submit feedback toward each other’s performance.
-                        </div>
-                       
-                        <div class="recent-feedback">
-                            <span>Issue</span>
-                            #9. Error in css of home controller. Home ---> View
-                        </div>
-                       </td>
-                       <td class="author">
-                            Annu Kumar Singh
-                       </td>
-                    </tr>  
-                    <tr class="project-tr">  
-                       <td>
-                            <a href="#"><span class="sn">1.</span> <span class="title">Review System</span></a> 
-                       </td>
-                       <td>
-                        <div class="desc">
-                            Employees to submit feedback toward each other’s performance.
-                        </div>
-                       
-                        <div class="recent-feedback">
-                            <span>Issue</span>
-                            #9. Error in css of home controller. Home ---> View
-                        </div>
-                       </td>
-                       <td class="author">
-                            Annu Kumar Singh
-                       </td>
-                    </tr>  
+                    <%  index++ } %>
                     </tbody>
                 </table>
             </div>

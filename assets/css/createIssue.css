@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap");
+#main-container #create-project {
+  text-align: end;
+  padding-right: 30px; }
+  #main-container #create-project button {
+    font-family: cursive;
+    border: none;
+    background: #b99b36;
+    color: #e9ecef;
+    font-size: 22px; }
+  #main-container #create-project button:hover {
+    background: #745e97; }
+
+#main-container #form-container form {
+  width: 50%;
+  border: solid 2px black;
+  border-radius: 10px;
+  margin: 10px; }
+  #main-container #form-container form div {
+    font-family: 'Roboto Mono',monospace;
+    display: flex;
+    margin: 5px;
+    background: #fff;
+    color: green; }
+    #main-container #form-container form div input {
+      width: auto; }

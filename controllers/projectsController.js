@@ -35,9 +35,10 @@ module.exports.createProject = async (req, res) => {
        
 
 module.exports.projectDetails = async (req,res)=>{
-  const projects = await Projects.find(req.params.id).populate('issues');
+  const project = await Projects.findById(req.params.id).populate('issues');
+  console.log(project);
   return res.render('projectDetails',{
       title:'Project-Details',
-      projects,
+      project,
   });
 } 
