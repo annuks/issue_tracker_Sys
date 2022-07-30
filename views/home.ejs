@@ -28,9 +28,9 @@
                     </tr>  
                     </thead>  
                     <tbody>  
-                        <!-- displaying projects list and their data after fetching from db -->
+                        <!-- displaying projects list and their data after fetching from db-->
                     <% for(project of projects){ %>
-
+                        
                     <tr class="project-tr">  
                        <td>
                             <a href="/projects/view/<%=project._id%>"><span class="sn"><%=index %>.</span> <span class="title"><%=project.projectTitle %></span></a> 
@@ -41,8 +41,17 @@
                         </div>
                        
                         <div class="recent-feedback">
+                       
+
                             <span>Issue</span>
-                            #9. Error in css of home controller. Home ---> View
+                            <% i = project.issues.length -1 %>
+                            <% index = i+1 %>
+                            <% if (i>=0) {%>
+                            <%=index%>. <%=project.issues[i].description %>
+                            <%}else{%>
+                            No Issues Yet    
+                            <%}%>
+
                         </div>
                        </td>
                        <td class="author">

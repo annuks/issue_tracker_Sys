@@ -25,7 +25,8 @@ module.exports.deleteProject = async (req, res) => {
 
 module.exports.projectDetails = async (req, res) => {
   const project = await Projects.findById(req.params.id).populate("issues");
-  console.log(project);
+  // console.log(project);
+
   return res.render("projectDetails", {
     title: "Project-Details",
     project,

@@ -29,18 +29,26 @@
         </div>
 
 
-        <!-- <div class="row">
-          <div class="col-3">
+        <div class="row">
+          <div class="col-3" id="label-input-checkbox">
             <label class="form-label" for="description">Label</label>
           </div>
-          <div class="col-8">
-            <select class="form-select">
-              <option value="1">Front-End</option>
-              <option value="2">DBA</option>
-              <option value="3">JS</option>
-            </select> 
+          <div class="col-6">
+            <div class="labels" id="label-span">
+            </div>
           </div>
-        </div> -->
+          <div class="col-2">
+              <div class="dropdown dropup">
+                <button class="btn btn-info dropdown-toggle  btn-sm" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  Labels
+                </button>
+                <ul id="label-group" class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><input type="text" class="form-control" id="label-issue" placeholder="Add New Label" onkeyup="newLabel()"></li>
+                  <li><button class="btn btn-primary btn-sm from-control" style="width: 100%;" onclick="addNewLabel()">Add Label</button></li>
+                </ul>
+              </div>
+          </div>
+        </div>
 
         <!-- Author input -->
         <div class="row">
@@ -66,11 +74,5 @@
       </form>
     </div>
   </div>
-  <script>
-    // js for closing form
-    function closeForm(){
-      document.getElementById("form-container").style.height = "0";
-      document.getElementById("form-container").style.width = "0";
-    }
-  </script>
+  <script src="/js/createIssue.js"></script>
 </body>

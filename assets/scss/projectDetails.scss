@@ -1,3 +1,5 @@
+
+// scss for project details page
 @import url('https://fonts.googleapis.com/css2?family=Saira:wght@100&display=swap');
 
 #main-container {
@@ -70,7 +72,31 @@
             padding: 17px;
             .issue-title{
                 font-size: large;
+                position: relative;
                 font-family: 'Saira', sans-serif;
+                .labels{
+                  margin-left: 20px;
+                  top:-3px;
+                  position: absolute;
+                  span{
+                    font-size: 11px;
+                    color: white;
+                    padding: 5px;
+                    border-radius: 14px;
+                  }
+                  span:nth-child(1) {
+                    background: blue;
+                  }
+                  span:nth-of-type(2) {
+                    background: red;
+                  }
+                  span:nth-of-type(3) {
+                    background: green;
+                  }
+                  span:nth-of-type(4) {
+                    background: purple;
+                  }
+                }
             }
             .description{
                 font-size: smaller;

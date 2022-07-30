@@ -55,7 +55,25 @@
       padding: 17px; }
       #main-container #project-details #issues-list .issue-box .issue-title {
         font-size: large;
+        position: relative;
         font-family: 'Saira', sans-serif; }
+        #main-container #project-details #issues-list .issue-box .issue-title .labels {
+          margin-left: 20px;
+          top: -3px;
+          position: absolute; }
+          #main-container #project-details #issues-list .issue-box .issue-title .labels span {
+            font-size: 11px;
+            color: white;
+            padding: 5px;
+            border-radius: 14px; }
+          #main-container #project-details #issues-list .issue-box .issue-title .labels span:nth-child(1) {
+            background: blue; }
+          #main-container #project-details #issues-list .issue-box .issue-title .labels span:nth-of-type(2) {
+            background: red; }
+          #main-container #project-details #issues-list .issue-box .issue-title .labels span:nth-of-type(3) {
+            background: green; }
+          #main-container #project-details #issues-list .issue-box .issue-title .labels span:nth-of-type(4) {
+            background: purple; }
       #main-container #project-details #issues-list .issue-box .description {
         font-size: smaller;
         color: antiquewhite; }

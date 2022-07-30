@@ -7,6 +7,7 @@
   width: 0;
   overflow: hidden;
   z-index: 88;
+  top: 20%;
   transition: ease-in-out 0.5s;
   #add-project {
     max-width: 700px;
@@ -40,6 +41,26 @@
         font-family: "Roboto Mono", monospace;
         margin: 5px;
         div {
+          .labels{
+            span{
+              font-size: smaller;
+              color: white;
+              padding: 5px;
+              border-radius: 14px;
+            }
+            span:nth-child(1) {
+              background: blue;
+            }
+            span:nth-of-type(2) {
+              background: red;
+            }
+            span:nth-of-type(3) {
+              background: green;
+            }
+            span:nth-of-type(4) {
+              background: purple;
+            }
+          }
           label {
             color: black;
             font-size: larger;

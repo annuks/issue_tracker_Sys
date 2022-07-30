@@ -6,7 +6,19 @@ const Projects =  require('../models/projects')
 
 module.exports.createIssue = async (req, res) => {
   try {
-    let issues = await Issues.create(req.body)
+    let issues = await Issues.create({
+      issueTitle: req.body.issueTitle,
+      description:req.body.description,
+      author:req.body.author
+    })
+    if(typeof(req.body.labels)=='string'){
+      issues.labels.push(req.body.labels);
+      issues.save();
+    }else{
+      issues.labels = req.body.labels;
+      issues.save();
+    }
+
     let project = await Projects.findById(req.body.project)
     project.issues.push(issues._id);
     project.save();

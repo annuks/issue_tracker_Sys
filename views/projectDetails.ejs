@@ -30,18 +30,25 @@
         <%- include('_createIssue.ejs') %>
         <div id="issues-list">
                 <!-- code for showing issue details -->
-                <% for(issue of project.issues) {%>
+                <% for(let i = project.issues.length -1 ; i >= 0;i-- ) {%>
+                    <% index = i+1 %>
                     <div class="issue-box">
                         <div class="issue-title">
-                            <%=issue.issueTitle %>
+                            <a href="/issues/delete/<%=project.issues[i]._id%>" class="btn btn-outline-danger float-end btn-xs btn-sm"><i class="fa-solid fa-trash"></i></a>
+                            <%=index%>. <%=project.issues[i].issueTitle %>
+                            <span class="labels">
+                                <% if(project.issues[i].labels.length >0){%>
+                                <% for (label of project.issues[i].labels) {%>
+                                    <span><%=label%></span>
+                                <%}}%>
+                            </span>
                         </div>
                         <div class="description">
-                            <%=issue.description %>
+                            <%=project.issues[i].description %>
                             
                         </div>
-                        <a href="/issues/delete/<%=issue._id%>"><div class="delete"><button type="button" class="btn btn-outline-danger"></button></div></a>
 
-                        <div class="author"><span>Author : </span> <%=issue.author %></div>
+                        <div class="author"><span>Author : </span> <%=project.issues[i].author %></div>
                     </div>
             <%}%>
             
@@ -55,7 +62,7 @@
 <!-- javascript for opening add project form -->
 <script>
     function openAddProject(){
-        document.getElementById("form-container").style.height = "430px";
+        document.getElementById("form-container").style.height = "auto";
         document.getElementById("form-container").style.width = "100%";
     }
 </script>

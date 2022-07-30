@@ -7,6 +7,7 @@
   width: 0;
   overflow: hidden;
   z-index: 88;
+  top: 20%;
   transition: ease-in-out 0.5s; }
   #form-container #add-project {
     max-width: 700px;
@@ -34,6 +35,19 @@
       #form-container #add-project form div {
         font-family: "Roboto Mono", monospace;
         margin: 5px; }
+        #form-container #add-project form div div .labels span {
+          font-size: smaller;
+          color: white;
+          padding: 5px;
+          border-radius: 14px; }
+        #form-container #add-project form div div .labels span:nth-child(1) {
+          background: blue; }
+        #form-container #add-project form div div .labels span:nth-of-type(2) {
+          background: red; }
+        #form-container #add-project form div div .labels span:nth-of-type(3) {
+          background: green; }
+        #form-container #add-project form div div .labels span:nth-of-type(4) {
+          background: purple; }
         #form-container #add-project form div div label {
           color: black;
           font-size: larger; }

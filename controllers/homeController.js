@@ -3,6 +3,7 @@ const Projects = require('../models/projects');
 module.exports.home = async (req,res)=>{
   try {
     const projects = await Projects.find({}).populate('issues');
+    console.log(projects)
       return res.render("home", {
         title: "Home|IssueTracker",
         projects,
