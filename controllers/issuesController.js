@@ -9,6 +9,7 @@ module.exports.createIssue = async (req, res) => {
     let issues = await Issues.create(req.body)
     let project = await Projects.findById(req.body.project)
     project.issues.push(issues._id);
+    project.save();
     return res.redirect('back');
   } catch (error) {
     console.log("Error in Issue Creation",error)
@@ -16,7 +17,7 @@ module.exports.createIssue = async (req, res) => {
   };
 
 
-  
+  // creating  controller action for deleting an issue
 
   module.exports.deleteIssue = async(req,res) =>{
     try {
@@ -26,10 +27,4 @@ module.exports.createIssue = async (req, res) => {
       console.log("Error in Issue Deletion",error)
     }
   }
-  module.exports.issueDetails = async (req,res)=>{
-    const issues = await Isuues.find(req.params.id).populate('projects');
-    return res.render('issueDetails',{
-        title:'Issues-Details',
-        issues,
-    });
-  } 
+  

@@ -1,26 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap");
-#main-container #create-project {
-  text-align: end;
-  padding-right: 30px; }
-  #main-container #create-project button {
-    font-family: cursive;
-    border: none;
-    background: #b99b36;
-    color: #e9ecef;
-    font-size: 22px; }
-  #main-container #create-project button:hover {
-    background: #745e97; }
-
-#main-container #form-container form {
-  width: 50%;
-  border: solid 2px black;
-  border-radius: 10px;
-  margin: 10px; }
-  #main-container #form-container form div {
-    font-family: 'Roboto Mono',monospace;
-    display: flex;
-    margin: 5px;
-    background: #fff;
-    color: green; }
-    #main-container #form-container form div input {
-      width: auto; }
+#form-container {
+  position: fixed;
+  width: 100%;
+  text-align: -webkit-center;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  z-index: 88;
+  transition: ease-in-out 0.5s; }
+  #form-container #add-project {
+    max-width: 700px;
+    background: floralwhite;
+    padding: 5px;
+    border: solid lightblue;
+    border-radius: 14px;
+    text-align: start; }
+    #form-container #add-project #form-header button {
+      float: right;
+      color: gray;
+      border: none;
+      background: none;
+      font-size: x-large;
+      transition: ease-in-out 0.1s; }
+    #form-container #add-project #form-header button:hover {
+      color: red;
+      transform: scale(0.8); }
+    #form-container #add-project #form-header h2 {
+      margin-left: 25px;
+      color: cadetblue;
+      font-weight: bold; }
+    #form-container #add-project form {
+      margin: 10px; }
+      #form-container #add-project form div {
+        font-family: "Roboto Mono", monospace;
+        margin: 5px; }
+        #form-container #add-project form div div label {
+          color: black;
+          font-size: larger; }

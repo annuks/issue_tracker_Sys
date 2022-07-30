@@ -1,3 +1,6 @@
+
+//setting model schema for db uses
+// creating projects model
 const mongoose = require("mongoose");
 const projectsSchema = new mongoose.Schema({
   projectTitle: {

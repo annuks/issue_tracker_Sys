@@ -1,40 +1,76 @@
 <link rel="stylesheet" href="/css/createIssue.css" />
 <body>
-  <div id="main-container">
-  <div id="create-project">
-    <button>Create Issue <i class="fa-solid fa-circle-plus"></i></button>
-    </div>
   <div id="form-container">
-<form action="/issues/create" method="post">
-  <!-- Title input -->
-  <div class="form-outline mb-2">
-    <label class="form-label" for="title">Title</label><br>
-    <input type="text" id="issue-title" class="form-control" name="issueTitle" />
-    <input name="project" value="<%=project._id%>" hidden/>
+    <div id="add-project">
+      <div id="form-header">
+          <button id="close-button" onclick="closeForm()">X</button>
+          <h2>Add Issue</h2><hr>
+      </div>
+      <form action="/issues/create" method="post">
+        <!-- Issue Title input -->
+        <div class="row">
+          <div class="col-3">
+            <label class="form-label" for="title">Title</label>
+          </div>
+          <div class="col-8">
+            <input type="text" id="issue-title" class="form-control" name="issueTitle" />
+            <input name="project" value="<%=project._id%>" hidden/>        
+          </div>
+        </div>
+
+        <!-- Description input -->
+        <div class="row">
+          <div class="col-3">
+            <label class="form-label" for="description">Description</label>
+          </div>
+          <div class="col-8">
+            <textarea class="form-control" id="issue-description" rows="4" name="description"></textarea>
+          </div>
+        </div>
+
+
+        <!-- <div class="row">
+          <div class="col-3">
+            <label class="form-label" for="description">Label</label>
+          </div>
+          <div class="col-8">
+            <select class="form-select">
+              <option value="1">Front-End</option>
+              <option value="2">DBA</option>
+              <option value="3">JS</option>
+            </select> 
+          </div>
+        </div> -->
+
+        <!-- Author input -->
+        <div class="row">
+          <div class="col-3">
+            <label class="form-label" for="form4Example2">Author</label>
+          </div>
+          <div class="col-8">
+            <input type="text" id="issue-author" class="form-control" name="author"/>
+          </div>
+        </div>
+
+
+
+
+        <!-- Submit button -->
+        <div class="row">
+          <div class="col-3">
+          </div>
+          <div class="col-8">
+            <button type="submit" class="btn btn-primary float-end">Create </button>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
-
-  <!-- Issue author input -->
-  <div class="form-outline mb-2">
-    <label class="form-label" for="form4Example2">Author</label><br>
-    <input type="text" id="issue-author" class="form-control" name="author"/>
-  </div>
-  <!-- Issue labels input -->
-  <!-- <div class="form-outline mb-4">
-    <label class="form-label" for="issue-label">Label of Issue</label>
-    <input type="text" id="labels" class="form-control" name="labels" />
-  </div> -->
-
-  <!-- Description input -->
-  <div class="form-outline mb-2">
-    <label class="form-label" for="description">Description</label>
-    <textarea class="form-control" id="issue-description" rows="4" name="description"></textarea>
-  </div>
-
-
-
-  <!-- Submit button -->
-  <button type="submit" class="btn btn-warning btn-block mb-2">Create</button>
-</div>
-</div>
-</form>
+  <script>
+    // js for closing form
+    function closeForm(){
+      document.getElementById("form-container").style.height = "0";
+      document.getElementById("form-container").style.width = "0";
+    }
+  </script>
 </body>

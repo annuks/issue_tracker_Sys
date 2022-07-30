@@ -1,34 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
-#main-container {
-  #create-project{
-    text-align: end;
-    padding-right: 30px;
-    button{
-      font-family:cursive;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap");
+#form-container {
+  position: fixed;
+  width: 100%;
+  text-align: -webkit-center;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  z-index: 88;
+  transition: ease-in-out 0.5s;
+  #add-project {
+    max-width: 700px;
+    background: floralwhite;
+    padding: 5px;
+    border: solid lightblue;
+    border-radius: 14px;
+    text-align: start;
+    #form-header {
+      button {
+        float: right;
+        color: gray;
         border: none;
-        background: #b99b36;
-        color: #e9ecef;
-        font-size: 22px;  
+        background: none;
+        font-size: x-large;
+        transition: ease-in-out 0.1s;
+      }
+      button:hover {
+        color: red;
+        transform: scale(0.8);
+      }
+      h2 {
+        margin-left: 25px;
+        color: cadetblue;
+        font-weight: bold;
+      }
     }
-    button:hover{
-        background: #745e97;
-    }
-  }
-  #form-container{
-    form { width: 50%;
-    border: solid 2px black;
-    border-radius: 10px;
-    margin: 10px;
-  
+    form {
+      margin: 10px;
       div {
-        font-family: 'Roboto Mono',monospace;
-        display: flex;
+        font-family: "Roboto Mono", monospace;
         margin: 5px;
-        background:#fff;
-        color: green;
-  
-        input {
-          width: auto;
+        div {
+          label {
+            color: black;
+            font-size: larger;
+          }
         }
       }
     }

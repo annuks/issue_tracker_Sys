@@ -1,3 +1,5 @@
+//setting model schema for db uses
+// creating issues model
 const mongoose = require("mongoose");
 const issuesSchema = new mongoose.Schema({
   issueTitle: {

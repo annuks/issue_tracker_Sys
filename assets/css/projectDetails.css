@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira:wght@100&display=swap");
+#main-container #project-details {
+  font-size: larger;
+  background-image: url("/images/back.jpg");
+  background-size: cover;
+  /* <------ */
+  background-repeat: no-repeat; }
+  #main-container #project-details #title {
+    background: linear-gradient(45deg, transparent, #3e9ecd);
+    display: flex; }
+    #main-container #project-details #title a {
+      background: none;
+      border: none;
+      color: #46a2cf;
+      font-size: xx-large;
+      margin: 0 20px;
+      transition: ease-in-out 0.2s; }
+    #main-container #project-details #title a:hover {
+      transform: scale(0.8);
+      color: palevioletred; }
+    #main-container #project-details #title h2 {
+      font-family: "Roboto Mono", monospace;
+      margin-top: 7px;
+      color: #448eb3; }
+  #main-container #project-details #description {
+    background: floralwhite;
+    margin-top: 10px;
+    padding: 10px; }
+    #main-container #project-details #description div {
+      display: flex;
+      justify-content: space-between; }
+      #main-container #project-details #description div p {
+        color: #3e9ecd; }
+        #main-container #project-details #description div p span {
+          color: gray; }
+      #main-container #project-details #description div div button {
+        border: none;
+        background: #28bce3;
+        color: #e9ecef;
+        font-size: 20px;
+        border-radius: 18px; }
+      #main-container #project-details #description div div button:hover {
+        background: #f3426d; }
+      #main-container #project-details #description div div button:hover .fa-circle-plus {
+        transform: scale(1.8);
+        margin-left: 5px; }
+  #main-container #project-details #issues-list {
+    height: 460px;
+    overflow: auto; }
+    #main-container #project-details #issues-list .issue-box {
+      background: #215089fc;
+      margin: 12px;
+      border-radius: 25px;
+      color: ghostwhite;
+      padding: 17px; }
+      #main-container #project-details #issues-list .issue-box .issue-title {
+        font-size: large;
+        font-family: 'Saira', sans-serif; }
+      #main-container #project-details #issues-list .issue-box .description {
+        font-size: smaller;
+        color: antiquewhite; }
+      #main-container #project-details #issues-list .issue-box .author {
+        text-align: end;
+        font-size: x-small; }
+        #main-container #project-details #issues-list .issue-box .author span {
+          color: yellow; }

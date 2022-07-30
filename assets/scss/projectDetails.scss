@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@100&display=swap');
+
+#main-container {
+  #project-details {
+    font-size: larger;
+    background-image: url("/images/back.jpg");
+    background-size: cover; /* <------ */
+    background-repeat: no-repeat;
+    #title {
+      background: linear-gradient(45deg, transparent, #3e9ecd);
+      display: flex;
+      a {
+        background: none;
+        border: none;
+        color: #46a2cf;
+        font-size: xx-large;
+        margin: 0 20px;
+        transition: ease-in-out 0.2s;
+      }
+      a:hover {
+        transform: scale(0.8);
+        color: palevioletred;
+      }
+      h2 {
+        font-family: "Roboto Mono", monospace;
+        margin-top: 7px;
+        color: #448eb3;
+      }
+    }
+    #description {
+      background: floralwhite;
+      margin-top: 10px;
+      padding: 10px;
+      div {
+        display: flex;
+        justify-content: space-between;
+        p{
+            color: #3e9ecd;
+            span{
+                color: gray;
+            }
+        }
+        div{
+            button{
+                border: none;
+                background: #28bce3;
+                color: #e9ecef;
+                font-size: 20px;
+                border-radius: 18px;
+                 
+            }
+            button:hover{
+                background: #f3426d;
+            }
+            button:hover .fa-circle-plus{
+                transform: scale(1.8);
+                margin-left: 5px;
+            }
+        }
+      }
+    }
+    #issues-list{
+        height: 460px;
+        overflow: auto;
+        .issue-box{
+            background: #215089fc;
+            margin: 12px;
+            border-radius: 25px;
+            color: ghostwhite;
+            padding: 17px;
+            .issue-title{
+                font-size: large;
+                font-family: 'Saira', sans-serif;
+            }
+            .description{
+                font-size: smaller;
+                color: antiquewhite;
+            }
+            .author{
+                text-align: end;
+                font-size: x-small;
+                span{
+                    color: yellow;
+                }
+            }
+        }
+    }
+  }
+}

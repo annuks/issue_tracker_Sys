@@ -1,14 +1,61 @@
+<!-- ejs for projects and issues details  -->
+<link rel="stylesheet" href="/css/projectDetails.css" />
+
 <body>
-<div id="main-container">
-<div id="project-details">
-<h2> Title : <%=project.projectTitle %></h2>
-<h6>  Description: <%=project.description %></h6>
-<h6> Author : <%=project.author %></h6>
+  <div id="main-container">
+    <div id="project-details">
+        <div id="title">
+            <a href="/" ><i class="fa-solid fa-arrow-left"></i></a>
+             <!-- code for showing project details -->
+            <h2> <%=project.projectTitle %></h2>
+        </div>
+        <div id="description">
+            <div>
+                <p><span>Description</span> <%=project.description %></p>
+                <a href="/projects/delete/<%=project._id%>"> <button type="button" class="btn btn-outline-danger"><i class="fa-solid fa-trash"></i> </button></a>
+            </div>
+            <div>
+                <p><span>Author</span> <%=project.author %></p>
+                <p><span>Creation Date</span> <%=project.createdAt %></p>
+            </div>
+            <div>
+                <div></div>
+                <!-- opening add issue form onclick event -->
+                <div>
+                    <button onclick="openAddProject()">Add Issue  <i class="fa-solid fa-circle-plus"></i></button>
+                </div>
+            </div>
+        </div>
+        <!-- calling create issue form as partial -->
+        <%- include('_createIssue.ejs') %>
+        <div id="issues-list">
+                <!-- code for showing issue details -->
+                <% for(issue of project.issues) {%>
+                    <div class="issue-box">
+                        <div class="issue-title">
+                            <%=issue.issueTitle %>
+                        </div>
+                        <div class="description">
+                            <%=issue.description %>
+                            
+                        </div>
+                        <a href="/issues/delete/<%=issue._id%>"><div class="delete"><button type="button" class="btn btn-outline-danger"></button></div></a>
 
-</div>
+                        <div class="author"><span>Author : </span> <%=issue.author %></div>
+                    </div>
+            <%}%>
+            
+            
+           
+        </div>
+    </div>
+  </div>
 
-
-</div>
-
-<%- include('_createIssue.ejs')%>
 </body>
+<!-- javascript for opening add project form -->
+<script>
+    function openAddProject(){
+        document.getElementById("form-container").style.height = "430px";
+        document.getElementById("form-container").style.width = "100%";
+    }
+</script>
