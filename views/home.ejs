@@ -3,12 +3,8 @@
 
 <!-- link for different resources such as bootstraps,cdn,stylesheet and js -->
 <link rel="stylesheet" href="/css/home.css">
-<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">   
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<link rel="stylesheet" href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
-<script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
 <body>
     <div id="main-container">
         <div id="add-project">
@@ -70,25 +66,21 @@
 
 <!-- js code for opening add project form -->
 <script
-src="https://code.jquery.com/jquery-3.6.0.min.js"
-integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-crossorigin="anonymous"></script>
-  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
-  <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js" ></script>
-  <!-- <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js" ></script>
-  <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js" ></script> -->
-  <script>$(document).ready( function () {
-      $('#table_id').DataTable( {
-      dom: 'Blfrtip',
-      lengthMenu: [
-          [10, 25, 50, -1],
-          [10, 25, 50, 'All'],
-      ],
-      buttons: [
-          'csv'
-      ]
-  });
-  } );</script>
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js" ></script>
+    <!-- <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js" ></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js" ></script> -->
+    <script>$(document).ready( function () {
+        $('#table_id').DataTable( {
+        lengthMenu: [
+            [10, 25, 50, -1],
+            [10, 25, 50, 'All'],
+        ]
+    });
+    } );</script>
     <script>
         function openAddProject(){
             document.getElementById("form-container").style.height = "378px";
