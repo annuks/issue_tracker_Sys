@@ -19,6 +19,7 @@ function addNewLabel(id){
     let labelHtml = `<li><a href="#" onclick="addLabelToSpan('${label}','${id}')" class="dropdown-item">${label}</a></li>`
     ul.innerHTML = labelHtml + ul.innerHTML;
 
+
     $.ajax({
         type: 'get',
         url : `/projects/add/labels/${id}/${label}`,
@@ -29,6 +30,9 @@ function addNewLabel(id){
             console.log(error);   
         }
     })
+    label="";
+    document.getElementById("label-issue").value = '';
+
 }
 
 function addLabelToSpan(value){
@@ -39,7 +43,7 @@ function addLabelToSpan(value){
     spandiv.innerHTML += spanHtml;
 
 
-    let checkbox = `<input type="checkbox" value="${label}" name="labels" checked hidden>`;
+    let checkbox = `<input type="checkbox" value="${value}" name="labels" checked hidden>`;
     labelCheckBox.innerHTML += checkbox;
 
 

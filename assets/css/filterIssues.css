@@ -1,0 +1,34 @@
+#filter-container {
+  display: flex;
+  justify-content: space-between;
+  background: #567ec3d9;
+  padding: 5px; }
+  #filter-container #filter-label-spans {
+    flex: auto; }
+    #filter-container #filter-label-spans span {
+      font-size: 11px;
+      color: white;
+      padding: 5px;
+      border-radius: 14px; }
+    #filter-container #filter-label-spans span:nth-child(1) {
+      background: blue; }
+    #filter-container #filter-label-spans span:nth-of-type(2) {
+      background: red; }
+    #filter-container #filter-label-spans span:nth-of-type(3) {
+      background: green; }
+    #filter-container #filter-label-spans span:nth-of-type(4) {
+      background: purple; }
+  #filter-container #dropdown-filter-labels {
+    margin: 0 10px; }
+  #filter-container .filter-search {
+    margin: 0 10px;
+    position: relative; }
+    #filter-container .filter-search button {
+      background: #42a0ce;
+      border: none;
+      position: absolute;
+      top: 0px;
+      right: 0;
+      color: whitesmoke;
+      border-radius: 4px;
+      height: 100%; }

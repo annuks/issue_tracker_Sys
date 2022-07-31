@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="/css/filterIssues.css">
+<body>
+    <div id="filter-container">
+        <div id="filter-label-spans">
+        </div>
+        <div id="dropdown-filter-labels">
+            <div class="dropdown">
+                <button class="btn btn-info dropdown-toggle  btn-sm" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  Labels
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <% for (label of project.labels) {%> 
+                    <li><a href="#" onclick="filterLabels('<%= label %>','<%=project._id%>')" class="dropdown-item"><%= label %></a></li>
+                  <%}%>
+                </ul>
+            </div>
+        </div>
+        <div class="filter-search">
+                <input type="text" id="author-filter" class="form-control" placeholder="Search by Author"  onkeyup="filterInputChange()"><button onclick="filterFromDB('<%=project._id%>')"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="filter-search">
+                <input type="text" id="search-filter" class="form-control" placeholder="Search by Title or Desc" onkeyup="filterInputChange()"><button onclick="filterFromDB('<%=project._id%>')"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    </div>
+
+    <script src="/js/filterIssues.js"></script>
+</body>

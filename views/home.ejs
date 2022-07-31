@@ -45,9 +45,9 @@
 
                             <span>Issue</span>
                             <% i = project.issues.length -1 %>
-                            <% index = i+1 %>
+                            <% ind = i+1 %>
                             <% if (i>=0) {%>
-                            <%=index%>. <%=project.issues[i].description %>
+                            <%=ind%>. <%=project.issues[i].description %>
                             <%}else{%>
                             No Issues Yet    
                             <%}%>

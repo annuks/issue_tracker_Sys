@@ -47,7 +47,7 @@
                    <li><a href="#" onclick="addLabelToSpan('<%= label %>')" class="dropdown-item"><%= label %></a></li>
                   <%}%>
                   <li><input type="text" class="form-control" id="label-issue" placeholder="Add New Label" onkeyup="newLabel()"></li>
-                  <li><button class="btn btn-primary btn-sm from-control" style="width: 100%;" onclick="addNewLabel('<%= project._id %>')">Add Label</button></li>
+                  <li><a class="btn btn-primary btn-sm from-control" style="width: 100%;" onclick="addNewLabel('<%= project._id %>')">Add Label</a></li>
                 </ul>
               </div>
           </div>

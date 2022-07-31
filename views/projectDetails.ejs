@@ -16,16 +16,21 @@
             </div>
             <div>
                 <p><span>Author</span> <%=project.author %></p>
-                <p><span>Creation Date</span> <%=project.createdAt %></p>
+                <p><span>Creation Date</span> <%=project.createdAt.toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' })%></p>
             </div>
             <div>
                 <div></div>
                 <!-- opening add issue form onclick event -->
                 <div>
-                    <button onclick="openAddProject()">Add Issue  <i class="fa-solid fa-circle-plus"></i></button>
+                    <button id="addIssueButton" onclick="openAddProject()">Add Issue  <i class="fa-solid fa-circle-plus"></i></button>
                 </div>
             </div>
         </div>
+        <div>
+            <%- include('_filterIssues.ejs') %>
+        </div>
+               
+
         <!-- calling create issue form as partial -->
         <%- include('_createIssue.ejs') %>
         <div id="issues-list">
@@ -39,7 +44,7 @@
                             <span class="labels">
                                 <% if(project.issues[i].labels.length >0){%>
                                 <% for (label of project.issues[i].labels) {%>
-                                    <span><%=label%></span>
+                                    <span><%=label %></span>
                                 <%}}%>
                             </span>
                         </div>
@@ -66,3 +71,4 @@
         document.getElementById("form-container").style.width = "100%";
     }
 </script>
+

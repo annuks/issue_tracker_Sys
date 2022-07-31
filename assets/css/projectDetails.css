@@ -33,15 +33,15 @@
         color: #3e9ecd; }
         #main-container #project-details #description div p span {
           color: gray; }
-      #main-container #project-details #description div div button {
+      #main-container #project-details #description div div #addIssueButton {
         border: none;
         background: #28bce3;
         color: #e9ecef;
         font-size: 20px;
         border-radius: 18px; }
-      #main-container #project-details #description div div button:hover {
+      #main-container #project-details #description div div #addIssueButton:hover {
         background: #f3426d; }
-      #main-container #project-details #description div div button:hover .fa-circle-plus {
+      #main-container #project-details #description div div #addIssueButton:hover .fa-circle-plus {
         transform: scale(1.8);
         margin-left: 5px; }
   #main-container #project-details #issues-list {

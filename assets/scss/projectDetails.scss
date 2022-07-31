@@ -43,7 +43,7 @@
             }
         }
         div{
-            button{
+            #addIssueButton{
                 border: none;
                 background: #28bce3;
                 color: #e9ecef;
@@ -51,10 +51,10 @@
                 border-radius: 18px;
                  
             }
-            button:hover{
+            #addIssueButton:hover{
                 background: #f3426d;
             }
-            button:hover .fa-circle-plus{
+            #addIssueButton:hover .fa-circle-plus{
                 transform: scale(1.8);
                 margin-left: 5px;
             }

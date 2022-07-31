@@ -36,7 +36,6 @@ module.exports.projectDetails = async (req, res) => {
 
 module.exports.addLabels = async (req,res)=>{
   try {
-        console.log("addLabel ")
 
         const project = await  Projects.findById(req.params.id);
         project.labels.push(req.params.label);
@@ -56,14 +55,31 @@ module.exports.addLabels = async (req,res)=>{
 };
 
 
-module.exports.FilterData = async (req,res)=>{
+module.exports.filterData = async (req,res)=>{
   try {
-    const project = await  Projects.findById(req.params.id)
-  .populate("issues");
+
+    let authorCheck = true;
+    let labelCheck = true;
+    if(req.body.labels.length > 0) {
+      labelCheck = false;
+    }
+    if (req.body.author.length > 0){
+      authorCheck=false;
+    }
+
+    // data flteration for dynamic search
+    const issues = await  Issues.find({
+      '$and':[{project:req.params.id},
+        {'$or':[{author : { '$exists': authorCheck } },{author:{'$regex':req.body.author}}]},
+        {'$or':[{labels : { '$exists': labelCheck } },{ labels:{'$all':req.body.labels}}]},
+        {'$or':[{issueTitle : {'$regex': req.body.search}},{description : {'$regex': req.body.search}}]
+      }]
+    });
+
 
   return res.json(200, {
     message: "Filter",
-    
+    data:{issues}
   });
     
   } catch (error) {

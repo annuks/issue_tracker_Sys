@@ -8,6 +8,8 @@ router.post('/create',projectsController.createProject);
 router.get('/delete/:id',projectsController.deleteProject);
 router.get('/view/:id'  ,projectsController.projectDetails);
 router.get('/add/labels/:id/:label',projectsController.addLabels);
+
+router.post('/filter/:id',projectsController.filterData);
 module.exports = router;
 
 

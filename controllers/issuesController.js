@@ -9,7 +9,8 @@ module.exports.createIssue = async (req, res) => {
     let issues = await Issues.create({
       issueTitle: req.body.issueTitle,
       description:req.body.description,
-      author:req.body.author
+      author:req.body.author,
+      project:req.body.project
     })
     if(typeof(req.body.labels)=='string'){
       issues.labels.push(req.body.labels);

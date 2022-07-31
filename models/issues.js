@@ -17,6 +17,10 @@ const issuesSchema = new mongoose.Schema({
   labels: [{
     type:String,
   }],
+  project: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref:'Projects'
+  }
 },
   {
     timestamps: true,
