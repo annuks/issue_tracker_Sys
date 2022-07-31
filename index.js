@@ -1,8 +1,7 @@
-//require('dotenv').config();
+require('dotenv').config();
 const express = require ('express');
 const router = express.Router();
 const app =  express();
-const PORT = 8000;
 const ejs = require("ejs");
 const path = require("path");
 const expressLayouts = require("express-ejs-layouts");
@@ -42,13 +41,13 @@ app.use("*", function (req,res){
 
 
 //establishing communication with server
-app.listen(PORT,(err)=>{
+app.listen(process.env.PORT,(err)=>{
     if(err){
         console.log("Error in Connection");
         return;
     }
     else{
-        console.log("Communicating with Server on Port--:",PORT);
+        console.log("Communicating with Server on Port--:",process.env.PORT);
     }
 
 });
