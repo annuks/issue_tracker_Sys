@@ -1,3 +1,5 @@
+
+
 // js for closing form
 let label;
 function closeForm(){
@@ -12,10 +14,21 @@ function newLabel(){
 
 
 
-function addNewLabel(){
+function addNewLabel(id){
     let ul = document.getElementById("label-group");
-    let labelHtml = `<li><a href="#" onclick="addLabelToSpan('${label}')" class="dropdown-item">${label}</a></li>`
+    let labelHtml = `<li><a href="#" onclick="addLabelToSpan('${label}','${id}')" class="dropdown-item">${label}</a></li>`
     ul.innerHTML = labelHtml + ul.innerHTML;
+
+    $.ajax({
+        type: 'get',
+        url : `/projects/add/labels/${id}/${label}`,
+        success:function(data){
+            console.log(data);
+        },
+        error: function(error){
+            console.log(error);   
+        }
+    })
 }
 
 function addLabelToSpan(value){
@@ -28,4 +41,6 @@ function addLabelToSpan(value){
 
     let checkbox = `<input type="checkbox" value="${label}" name="labels" checked hidden>`;
     labelCheckBox.innerHTML += checkbox;
+
+
 }

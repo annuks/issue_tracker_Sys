@@ -43,8 +43,11 @@
                   Labels
                 </button>
                 <ul id="label-group" class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <% for (label of project.labels) {%> 
+                   <li><a href="#" onclick="addLabelToSpan('<%= label %>')" class="dropdown-item"><%= label %></a></li>
+                  <%}%>
                   <li><input type="text" class="form-control" id="label-issue" placeholder="Add New Label" onkeyup="newLabel()"></li>
-                  <li><button class="btn btn-primary btn-sm from-control" style="width: 100%;" onclick="addNewLabel()">Add Label</button></li>
+                  <li><button class="btn btn-primary btn-sm from-control" style="width: 100%;" onclick="addNewLabel('<%= project._id %>')">Add Label</button></li>
                 </ul>
               </div>
           </div>
@@ -74,5 +77,6 @@
       </form>
     </div>
   </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="/js/createIssue.js"></script>
 </body>

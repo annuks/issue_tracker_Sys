@@ -32,3 +32,46 @@ module.exports.projectDetails = async (req, res) => {
     project,
   });
 };
+
+
+module.exports.addLabels = async (req,res)=>{
+  try {
+        console.log("addLabel ")
+
+        const project = await  Projects.findById(req.params.id);
+        project.labels.push(req.params.label);
+        project.save();
+        return res.json(200, {
+          message: "Labels Created",
+          success: true,
+        });
+
+  } catch (err) {
+    console.log("********", err);
+    return res.json(500, {
+      success: false,
+      message: " **Internal Server Error**",
+    });
+  }
+};
+
+
+module.exports.FilterData = async (req,res)=>{
+  try {
+    const project = await  Projects.findById(req.params.id)
+  .populate("issues");
+
+  return res.json(200, {
+    message: "Filter",
+    
+  });
+    
+  } catch (error) {
+    console.log(" *********", err);
+    return res.json(404, {
+      message: "Internal Server error",
+    
+  });
+  
+}
+};
