@@ -1,6 +1,6 @@
 let author = "";
 let search = "";
-let labels =[];
+let labels = [];
 
 function filterInputChange(){
     let authorInput = document.getElementById("author-filter");
@@ -25,7 +25,7 @@ function filterFromDB(id){
         data:{
             author,
             search,
-            labels
+            labels:labels,
         },
 
         url : `/projects/filter/${id}`,

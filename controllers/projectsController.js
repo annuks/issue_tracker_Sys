@@ -60,7 +60,7 @@ module.exports.filterData = async (req,res)=>{
 
     let authorCheck = true;
     let labelCheck = true;
-    if(req.body.labels.length > 0) {
+    if(req.body.labels) {
       labelCheck = false;
     }
     if (req.body.author.length > 0){
@@ -75,7 +75,6 @@ module.exports.filterData = async (req,res)=>{
         {'$or':[{issueTitle : {'$regex': req.body.search}},{description : {'$regex': req.body.search}}]
       }]
     });
-
 
   return res.json(200, {
     message: "Filter",
