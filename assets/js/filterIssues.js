@@ -1,3 +1,4 @@
+// js function for filteration from database
 let author = "";
 let search = "";
 let labels = [];
@@ -18,7 +19,7 @@ function filterLabels(label,id){
     filterFromDB(id);
 }
 
-
+//function for accessing data dynamically from database
 function filterFromDB(id){
     $.ajax({
         type: 'post',
@@ -40,7 +41,7 @@ function filterFromDB(id){
     })
 }
 
-
+// function for showing data on page after filteration
 function showDatatoHtml(issues){
     let issuescontainer = document.getElementById('issues-list');
     issuescontainer.innerHTML = '';
