@@ -2,7 +2,7 @@
 // connecting mongoose with database 
 const mongoose = require('mongoose');
 // db address on cloud
-mongoose.connect(DB="mongodb+srv://annukumarsingh:HdiaunmRTKVFCJd3@cluster0.skfggd8.mongodb.net/issue_tracker_sys");
+mongoose.connect(DB="mongodb+srv://annukumarsingh:sXuWgQ5RyzZkpd1U@cluster0.skfggd8.mongodb.net/issue_tracker_sys");
 
 const db = mongoose.connection;
 
